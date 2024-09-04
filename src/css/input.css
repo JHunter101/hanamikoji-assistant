@@ -1,0 +1,47 @@
+:root {
+  --main-font: var(--mono-font);
+}
+
+.section-container {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#tileset-container {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+#tile-container {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#tileset-container .overlay > *:first-child,
+#tile-container .overlay > *:first-child {
+  aspect-ratio: 1 / 1;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#tileset-container .overlay > *:last-child,
+#tile-container .overlay > *:last-child {
+  font-size: min(12vw, 4rem);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#tile-container .overlay .tile-info {
+  font-size: min(6vw, 2rem);
+}
+
+#tile-container .tile-number {
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #tileset-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  #tile-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

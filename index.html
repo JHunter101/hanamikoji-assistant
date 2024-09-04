@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hanamikoji Assistant</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://jhunter101.github.io/frostbyte/src/frostbyte/css/frostbyte.css"
+    />
+    <link rel="stylesheet" type="text/css" href="src/css/input.css" />
+    <script src="dist/dep/frostbyte-v0.0.3/ts/basic.js"></script>
+    <script src="dist/dep/frostbyte-v0.0.3/ts/tooltip.js"></script>
+    <script src="dist/src/ts/data-game.js"></script>
+    <script src="dist/src/ts/load-game.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <main>
+      <section id="buttons" class="section screen--tuck flex--row gap--medium">
+        <button
+          class="flex-1 btn--main"
+          onclick="unhide('section-version-select'); hide('section-tiles');"
+        >
+          Main Menu
+        </button>
+      </section>
+
+      <section
+        id="section-version-select"
+        class="section screen--tuck flex--col gap--medium"
+      >
+        <div id="main-menu-message" class="w100">
+          <h1 class="title">Hanamikoji Assistant</h1>
+          <h3 class="header--large">By Jack Chen</h3>
+          <p>
+            This web program is intended to be used in conjunction with the
+            Hanamikoji (Geisha's Road) Board Game.
+          </p>
+        </div>
+        <div id="tileset-container" class="grid gap--small">
+          <div class="flex-1 overlay">
+            <div class="bg--color-grey"></div>
+            <div onclick="loadTileset(0)">0</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-red"></div>
+            <div onclick="loadTileset(1)">1</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-orange"></div>
+            <div onclick="loadTileset(2)">2</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-yellow"></div>
+            <div onclick="loadTileset(3)">3</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-green"></div>
+            <div onclick="loadTileset(4)">4</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-blue"></div>
+            <div onclick="loadTileset(5)">5</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-purple"></div>
+            <div onclick="loadTileset(6)">6</div>
+          </div>
+
+          <div class="flex-1 overlay">
+            <div class="bg--color-pink"></div>
+            <div onclick="loadTileset(7)">7</div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="section-tiles"
+        class="section screen--tuck flex--col gap--medium hidden"
+      >
+        <div id="tile-container" class="grid gap--small">
+          <div class="overlay">
+            <div
+              id="tile-1"
+              class="bg--color-green"
+              onclick='classSwap(this,"bg--color-green","bg--color-red")'
+            ></div>
+            <div>
+              <div class="tile-number">1</div>
+              <div id="tile-info-1" class="tile-info tooltip"></div>
+            </div>
+          </div>
+          <div class="overlay">
+            <div
+              id="tile-2"
+              class="bg--color-green"
+              onclick='classSwap(this,"bg--color-green","bg--color-red")'
+            ></div>
+            <div>
+              <div class="tile-number">2</div>
+              <div id="tile-info-2" class="tile-info tooltip"></div>
+            </div>
+          </div>
+          <div class="overlay">
+            <div
+              id="tile-3"
+              class="bg--color-green"
+              onclick='classSwap(this,"bg--color-green","bg--color-red")'
+            ></div>
+            <div>
+              <div class="tile-number">3</div>
+              <div id="tile-info-3" class="tile-info tooltip"></div>
+            </div>
+          </div>
+          <div class="overlay">
+            <div
+              id="tile-4"
+              class="bg--color-green"
+              onclick='classSwap(this,"bg--color-green","bg--color-red")'
+            ></div>
+            <div>
+              <div class="tile-number">4</div>
+              <div id="tile-info-4" class="tile-info tooltip"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
