@@ -56,6 +56,6 @@ const DATA_GAME_RULES = {
     competition: 'Place 2 sets of item card(s) faceup. One set has y cards, the other has z cards. Your opponent picks and plays one set. You play the other.',
     intercept: 'Place x item card(s) faceup. Your opponent discards y item card(s), You play the other(s).',
     giveaway: "Place x item card(s) facedown. These are played to your opponent's side at the end of the game.",
-    reveal: 'Place and play x item card(s) to your side.',
+    reveal: 'Place and play x item card(s) faceup to your side.',
     referral: 'Place x item card(s) back to the bottom of the draw deck. Play x item card(s) directly from the top of the draw deck to your side.',
 };
